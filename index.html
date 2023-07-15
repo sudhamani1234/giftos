@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/43df530aea.js" crossorigin="anonymous"></script>
+    <title>Shopping Application</title>
+    <style>
+        .head {
+            text-align: center;
+            color:blueviolet
+        }
+
+        .msg {
+            background-color: orange;
+        }
+        .search input{
+            width:500px;
+            height:40px;
+            
+
+        }
+        .search{
+            text-align: center;
+            background-color: tan;
+            padding:30px;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            background-color: antiquewhite;
+            padding: 10px;
+
+
+
+        }
+
+        .enqi a {
+            padding: 40px;
+            text-decoration: none;
+
+        }
+
+        .login a {
+            padding: 40px;
+            text-decoration: none;
+        }
+
+
+
+        .info a:active {
+
+            background-color: white;
+            color: black;
+            padding: 10px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            background-color: pink;
+
+        }
+
+        .para {
+            margin-top: 100px;
+        }
+
+        .para p {
+            text-align: left;
+        }
+
+        .para button {
+            background-color: brown;
+           
+            color: white
+        }
+        .head0{
+            text-align: center;
+        }
+
+        .teddy {
+            border: 1px solid;
+            border-radius: 20px;
+            width: 300px;
+            text-align: center;
+            background-color: grey;
+            color: antiquewhite
+        }
+
+        .watch {
+            border: 1px solid;
+            border-radius: 20px;
+            width: 300px;
+            text-align: center;
+            background-color: grey;
+            color: antiquewhite
+        }
+        .products1{
+            display:flex;
+            justify-content: space-around;
+        }
+        /*.products2{
+            display:flex;
+            justify-content: space-around;
+        }*/
+        .viewprod{
+            text-align: center;
+        }
+        .viewprod button{
+            background-color: tomato;
+            color: white;
+            border-radius: 20px;
+            
+
+        }
+        .head1{
+            text-align: center;
+        }
+        .why{
+            display: flex;
+            justify-content: space-around;
+        }
+        .why div{
+            border:1px solid black;
+            width:300px;
+            border-radius: 20px;
+            background-color: wheat;
+            text-align: center;
+        }
+        .head2{
+            text-align: center;
+        }
+        .form{
+            border:1px solid black;
+            border-radius: 5px;
+            width:300px;
+            margin-left: 470px;
+
+        }
+        .icons{
+            text-align: center;
+
+        }
+        .office{
+            display:flex;
+            justify-content: space-around;
+        }
+        .address{
+            background-color: black;
+            color:white;
+        }
+        
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <h1>GIFTOS FOR GIRLS</h1>
+    </div>
+    <div class="msg">
+        <marquee behavior="alternate" direction="right">Let's shop gifts for your loved one's!!!</marquee>
+    </div>
+    <div class="info">
+        <div class="enqi">
+            <a href="">HOME</a>
+            <a href="#shop">SHOP</a>
+            <a href="#why">WHY US</a>
+            <a href="#contact">CONTACT US</a>
+        </div>
+        <div class="login">
+            <a href="login.html" target="_blank">LOGIN</a>
+            
+            <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+    </div>
+    <!--<div class="search">
+        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+        <input type="text" placeholder="Search your products">
+    </div>-->
+    <div class="content">
+        <div class="para">
+            <h1>Welcome To Our Gift Shop</h1>
+            <p>Shop your favourite gifts for birthdays, anniversaries etc. Here we present variour gifts which makes the
+                day special!!!!!</p>
+            <br>
+            <button onclick="contact()">CONTACT US</button>
+        </div>
+        <div class="img">
+            <img src="https://img.freepik.com/free-photo/portrait-cute-little-girl-with-shopping-bag_169016-5947.jpg?size=626&ext=jpg&ga=GA1.1.1171783894.1689400081&semt=ais"
+                alt="image">
+        </div>
+    </div>
+    <div id="shop">
+        <div class="head0">
+            <h1>LATEST PRODUCTS</h1>
+        </div>
+        <div class="products1">
+            <div class="teddy">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeq6t-DIRtoZW4ZD65d1PMWoHnzF69LtvITQ&usqp=CAU"
+                    width="250px" height="250px">
+                <p><b>Teddy Bear</b></p>
+                <p><b>Price:300</b></p>
+            </div>
+            <div class="watch">
+                <img src="data:image/jpeg;base64,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"
+                    width="250px" height="250px">
+                <p><b>Watch</b></p>
+                <p><b>Price:700</b></p>
+            </div>
+            <div class="watch">
+                <img src="https://www.ikea.com/in/en/images/products/smycka-artificial-bouquet-pink__0636637_pe697930_s5.jpg?f=m"
+                    width="250px" height="250px">
+                <p><b>Watch</b></p>
+                <p><b>Price:700</b></p>
+            </div>
+            <div class="watch">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQspoGEyvJJvGAp-w2byf4fMOcOt3V3E9phzg&usqp=CAU"
+                    width="250px" height="250px">
+                <p><b>Watch</b></p>
+                <p><b>Price:700</b></p>
+            </div>
+        </div>
+        <br><br>
+        <div class="viewprod">
+            <button onclick="viewproducts()">VIEW ALL PRODUCTS</button>
+        </div>
+        <br><br><br><br>
+        <div id="why">
+            <div class="head1">
+                <h1>WHY SHOP WITH US</h1>
+            </div>
+            <div class="why">
+                <div>
+                    <i class="fa-solid fa-truck"></i>
+                    <h4><b>Fast Delivery</b></h4>
+                    <p>We can deliver the products fastly!!</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-comments-dollar"></i>
+                    <h4><b>Free Delivery</b></h4>
+                    <p>Delivery does not apply!!</p>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-thumbs-up"></i>
+                    <h4><b>Best Quality</b></h4>
+                    <p>We deliver best quality products ever!!</p>
+
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br><br><br><br>
+        <div id="contact">
+            <div class="head2">
+                <h1>CONTACT US</h1>
+            </div>
+            <div class="form">
+                <form>
+                    <label>Name</label><br>
+                    <input type="text" placeholder="Enter your name"><br><br>
+                    <label>Email</label><br>
+                    <input type="email" placeholder="Enter your email"><br><br>
+                    <label>Message</label><br>
+                    <textarea>
+                        
+
+                    </textarea><br><br>
+                    <button>Submit</button>
+                </form>
+            </div>
+            <br>,br><br><br><br><br><br><br>
+            <div class="address">
+                <div class="icons">
+                    <p> <i class="fa-brands fa-facebook-f"></i>    <i class="fa-brands fa-twitter"></i>     <i class="fa-brands fa-instagram"></i>     <i class="fa-brands fa-square-youtube"></i> </p>
+                </div>
+                <div class="office">
+                    <div>
+                        <h4>ABOUT US</h4>
+                        <p>We deliver online products which includes gifts for girls</p>
+                    </div>
+                    <div>
+                        <h4>ADDRESS</h4>
+                        <address>
+                            GB Road,
+                            Maarathahalli,
+                            Bangalore 560037
+                        </address>
+
+                    </div>
+                    <div id="phone">
+                        <h4>CONTACT</h4>
+                        <p><i class="fa-solid fa-phone"></i>+91 9885950312</p>
+                        <p><i class="fa-regular fa-envelope"></i>giftosforgirls@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function contact(){
+            window.location.href="#phone"
+        }
+        function viewproducts(){
+            window.location.href="shop.html"
+        }
+       
+    </script>
+</body>
+
+</html>
